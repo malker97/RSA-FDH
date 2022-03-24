@@ -5,7 +5,7 @@ import sys
 import signature
 
 def send(ciphertext):
-  UDP_IP = "127.0.0.1"
+  UDP_IP = "192.168.0.197"
   UDP_PORT = 5006
 
   MESSAGE = ciphertext

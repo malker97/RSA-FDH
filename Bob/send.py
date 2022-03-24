@@ -4,7 +4,7 @@ import socket
 import sys
 import encrypt
 
-UDP_IP = "127.0.0.1"
+UDP_IP = "192.168.0.197"
 UDP_PORT = 5005
 
 MESSAGE = sys.argv[1]

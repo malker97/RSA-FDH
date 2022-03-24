@@ -14,7 +14,10 @@ print("UDP target IP: %s" % UDP_IP)
 print("UDP target port: %s" % UDP_PORT)
 print("Message: %s" % MESSAGE)
 print("Ciphertext: %s" % ciphertext)
-
+file = "plaintext.txt"
+file=open(file, 'w')
+file.write(plaintext)
+file.close()
 
 # data_dict = ast.literal_eval(data_string)
 

@@ -11,6 +11,6 @@ while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
     print("received message: %s" % data)
     # date 目前是bytes数据类型，所以需要重新转换回dict
-    data = data.decode("utf-8") 
-    data = ast.literal_eval(data)
+    # data = data.decode("utf-8") 
+    # data = ast.literal_eval(data)
     verify.vertify(data)

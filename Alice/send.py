@@ -26,4 +26,4 @@ def send(ciphertext):
 
   sock = socket.socket(socket.AF_INET, # Internet
                           socket.SOCK_DGRAM) # UDP
-  sock.sendto(data_bin, (UDP_IP, UDP_PORT))
+  sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))

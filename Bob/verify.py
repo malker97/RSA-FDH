@@ -1,14 +1,18 @@
-import imp
 from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 import fdh
-import sys
+
 
 def vertify(data):
-    signature = data['signature']
+    file = "plaintext.txt"
+    file=open(file, 'r')
+    plaintext = file.read()
+    plaintext = str.encode(plaintext)
+    # print("文件中的Plaintext:", plaintext)
+    signature = data
     print(f'签名:{signature}')
-    message = data['plaintext']
+    message = plaintext
     print(f'原始数据: {message}')
     message = fdh.fdh(message,600)
     print(f'Hash后的原始数据: {message}')

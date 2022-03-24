@@ -1,7 +1,10 @@
 # reference: https://www.geeksforgeeks.org/full-domain-hashing-with-variable-hash-size-in-python/
 import binascii
+from cmath import sin
 from math import ceil
 from hashlib import sha256
+
+from numpy import sign
  
 # Function to perform Full Domain
 # Hash of 'message' using
@@ -36,7 +39,19 @@ def fdh(message, n = 2048):
     # Converting back to the
     # ASCII from binary format
     return binascii.unhexlify('00%x' % int(resAsBinary, 2)).hex()
- 
+# sign1 = fdh(b'ItsBob', 600)
+# sign2 = fdh(b'NGLITSREALBOB', 600)
+# sign1 = str.encode(sign1)
+# sign2 = str.encode(sign2)
+# sign1 =  int.from_bytes(sign1, "big", signed="True")
+# sign2 =  int.from_bytes(sign2, "big", signed="True")
+# print("ItsBob", sign1)
+# print("NGLITSREALBOB", sign2)
+# # print(sign1*sign2)
+# fake_sign = sign1 * sign2
+# fake_sign = str(fake_sign)
+# fake_sign = str.encode(fake_sign)
+# print(fake_sign)
 # # Driver code
 # if __name__ == '__main__':
 #     # Message to be hashed

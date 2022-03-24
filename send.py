@@ -3,7 +3,6 @@ from pydoc import plain
 import socket
 import sys
 import signature
-import ast
 
 
 UDP_IP = "127.0.0.1"
@@ -15,7 +14,8 @@ plaintext = str.encode(plaintext)
 MESSAGE = signature.signature(MESSAGE)
 print("UDP target IP: %s" % UDP_IP)
 print("UDP target port: %s" % UDP_PORT)
-print("message: %s" % MESSAGE)
+print("Plaintext:", plaintext)
+print("Signature: %s" % MESSAGE)
 data_dict = {
   "plaintext": plaintext,
   "signature": MESSAGE,
@@ -23,7 +23,6 @@ data_dict = {
 
 data_string = str(data_dict)
 data_bin = str.encode(data_string)
-# data_dict = ast.literal_eval(data_string)
 
 sock = socket.socket(socket.AF_INET, # Internet
                         socket.SOCK_DGRAM) # UDP

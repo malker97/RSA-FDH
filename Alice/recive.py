@@ -2,7 +2,7 @@ import socket
 import decrypt
 import send
 
-UDP_IP = "127.0.0.1"
+UDP_IP = "192.168.0.163"
 UDP_PORT = 5005
 BOB_UDP_PORT = 5006
 sock = socket.socket(socket.AF_INET, # Internet

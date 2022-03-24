@@ -3,10 +3,9 @@ import fdh
 from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
-import sys
 
-def signature():
-    plaintext = sys.argv[1]
+def signature(plaintext):
+    # plaintext = sys.argv[1]
     print ('要签名的数据为:', plaintext)
     plaintext = str.encode(plaintext)
     message = fdh.fdh(plaintext, 600)
@@ -16,4 +15,5 @@ def signature():
     h = SHA256.new(message)
     signature = pkcs1_15.new(key).sign(h)
     print(f'生成的签名为: {signature}')
-signature()
+    return signature
+# signature()
